@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="61dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="290dp"
+            android:clickable="true"
+            android:text="Cancel"
+            android:textColor="#FF6464"
+            android:textSize="17dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:textSize="17dp"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:text="1/2"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="153dp"
+            android:text="Ingredients"
+            android:textColor="#3E5481"
+            android:textSize="17dp"
+            android:textStyle="bold"></TextView>
+
+        <LinearLayout
+            android:layout_width="74dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:clickable="true">
+
+            <ImageView
+
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/Vector" />
+
+            <TextView
+                android:layout_width="45dp"
+                android:layout_height="18dp"
+                android:textSize="15dp"
+
+
+                android:text="Group"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+
+        android:orientation="horizontal">
+
+        <ImageView
+
+            android:layout_width="24dp"
+            android:layout_marginTop="25dp"
+            android:layout_height="24dp"
+            android:src="@drawable/tochki"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="8dp"/>
+        <EditText
+            android:layout_width="295dp"
+            android:layout_height="56dp"
+            android:hint="Enter ingredient"
+            android:background="@drawable/edit_text_background" />
+
+
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
