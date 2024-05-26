@@ -8,6 +8,8 @@ env:
   playstore_name: Frogobox ID
 
 on:
+  pull_request:
+    types: [opened, synchronize, edited, ready_for_review]
 
   push:
     branches:
