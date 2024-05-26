@@ -7,12 +7,37 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Start Cooking"
+        android:textSize="60px"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="509dp" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TLet’s join our community
+to cook better food!"
+        tools:layout_editor_absoluteX="62dp"
+        tools:layout_editor_absoluteY="569dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="314dp"
+        android:layout_height="52dp"
+        android:text="Get Started"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="641dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="415dp"
+        android:layout_height="501dp"
+        app:srcCompat="@drawable/onboarding"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="-7dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
