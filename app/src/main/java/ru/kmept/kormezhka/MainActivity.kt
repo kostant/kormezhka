@@ -1,10 +1,8 @@
 package ru.kmept.kormezhka
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import ru.kmept.kormezhka.data.RecipesRepository
+import ru.kmept.kormezhka.data.model.Recipe
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,6 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        RecipesRepository.global.getFoodRecipes {
+            updateScreenWithRecipes(it)
+        }
+    }
 
+    fun updateScreenWithRecipes(recipes: Array<Recipe>) {
+        // Обновить экран используя рецепты из массива recipes
     }
 }
