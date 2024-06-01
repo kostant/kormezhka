@@ -2,23 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/switcherFragment"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+    </FrameLayout>
     <LinearLayout
         android:background="@drawable/back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom">
         <LinearLayout
+            android:id="@+id/home_tab"
             android:layout_marginLeft="22dp"
             android:layout_marginTop="82dp"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <ImageButton
+            <ImageView
                 android:layout_marginLeft="5dp"
                 android:layout_marginBottom="8dp"
-                android:id="@+id/home"
+                android:id="@+id/home1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/home"/>
@@ -30,13 +38,14 @@
                 android:text="Home"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/upload_tab"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="82dp"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <ImageButton
+            <ImageView
                 android:id="@+id/upload"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="6dp"
@@ -59,11 +68,12 @@
             android:layout_weight="1"
             android:layout_height="wrap_content">
             <LinearLayout
+                android:id="@+id/scan_tab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/dshpare">
-                <ImageButton
+                <ImageView
                     android:id="@+id/scan"
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
@@ -83,13 +93,14 @@
                 android:text="Scan"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/noti_tab"
             android:orientation="vertical"
             android:layout_marginLeft="10dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginTop="82dp">
-            <ImageButton
+            <ImageView
                 android:id="@+id/noti"
                 android:layout_marginLeft="18dp"
                 android:layout_marginBottom="8dp"
@@ -104,6 +115,7 @@
                 android:text="Notification"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/profile_tab"
             android:layout_marginTop="82dp"
             android:layout_width="0dp"
             android:layout_marginLeft="10dp"
