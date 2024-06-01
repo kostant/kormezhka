@@ -7,15 +7,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import ru.kmept.kormezhka.data.model.Recipe
 
 class main_screen : AppCompatActivity() {
+    val adapter = ProductsAdapter()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_screen_activity)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recycler)
 
-        val adapter = ProductsAdapter()
         recyclerView.adapter = adapter
 
         val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(this, 2)
@@ -27,6 +28,12 @@ class main_screen : AppCompatActivity() {
 
         setButtonColor(button_add, button_food, button_drink)
 
+
+
+    }
+    fun updateScreenWithRecipes(recipes: Array<Recipe>) {
+        // Обновить экран используя рецепты из массива recipes
+        adapter.recipes = recipes
     }
     private fun setButtonColor(vararg buttons: Button) {
         for (button in buttons) {
