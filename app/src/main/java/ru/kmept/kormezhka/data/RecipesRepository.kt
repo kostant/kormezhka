@@ -45,6 +45,10 @@ class RecipesRepository {
     fun getAllRecipes(result: (Array<Recipe>) -> Unit) {
         getFoodRecipes(result)
     }
+
+    fun getById(id: Int, result: (Recipe) -> Unit) {
+        result(mockFoodRecipes.first { it.id == id })
+    }
 }
 
 class IdGenerator {
