@@ -86,23 +86,24 @@
            </TextView>
 
            <TextView
+               android:id="@+id/timer"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:text="03:12"
-               android:textColor="#FF6464">
-           </TextView>
+               android:text="03:00"
+               android:textColor="#FF6464"></TextView>
+
 
        </LinearLayout>
 
        <Button
+           android:id="@+id/start"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:backgroundTint="#1FCC79"
-           android:text="Verify"
            android:layout_marginLeft="40dp"
+           android:layout_marginTop="20dp"
            android:layout_marginRight="40dp"
-           android:layout_marginTop="20dp">
-       </Button>
+           android:backgroundTint="#1FCC79"
+           android:text="Verify"></Button>
 
    </LinearLayout>
 
