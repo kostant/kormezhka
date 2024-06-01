@@ -1,11 +1,12 @@
-package ru.kmept.kormezhka
+package ru.kmept.kormezhka.recipe_detail
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import ru.kmept.kormezhka.R
 
-class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class ProductHeaderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val foodTextView: TextView
     private val timeTextView: TextView
     private val avatarImageView: ImageView

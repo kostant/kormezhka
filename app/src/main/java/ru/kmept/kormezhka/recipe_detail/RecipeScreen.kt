@@ -1,9 +1,10 @@
-package ru.kmept.kormezhka
+package ru.kmept.kormezhka.recipe_detail
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import ru.kmept.kormezhka.R
 
 class RecipeScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
