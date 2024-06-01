@@ -1,6 +1,7 @@
 package ru.kmept.kormezhka
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import ru.kmept.kormezhka.data.RecipesRepository
 import ru.kmept.kormezhka.data.model.Recipe
 
