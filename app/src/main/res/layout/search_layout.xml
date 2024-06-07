@@ -3,17 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:divider="@drawable/greyball_background"
     android:nestedScrollingEnabled="false"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="96dp"
-        android:divider="@drawable/ic_launcher_foreground"
-        android:orientation="horizontal"
         android:background="@drawable/white_background"
-        >
+        android:divider="@drawable/ic_launcher_foreground"
+        android:orientation="horizontal">
 
         <View
             android:layout_width="24dp"
@@ -24,242 +25,161 @@
             android:onClick="goback"
             android:rotation="90"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
         <LinearLayout
-            android:layout_marginLeft="60dp"
             android:layout_width="231dp"
             android:layout_height="56dp"
-            android:background="@drawable/greyball_background"
-            android:layout_gravity="center">
-        <View
-            android:layout_width="18dp"
-            android:layout_marginLeft="25dp"
-            android:layout_height="18dp"
-            android:foreground="@drawable/vector"
             android:layout_gravity="center"
-            />
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/greyball_background">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="25dp"
+                android:foreground="@drawable/vector"
+                android:onClick="search"/>
 
             <EditText
+                android:id="@+id/searchbandle"
                 android:layout_width="146dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
-                android:background="null"
+                android:background="#00FFFFFF"
                 android:hint="введите запрос"
-                tools:ignore="TouchTargetSizeCheck" />
-            <View
-                android:layout_width="18dp"
-                android:layout_marginLeft="2dp"
-                android:layout_height="18dp"
-                android:foreground="@drawable/closeicon"
-                android:layout_gravity="center"
+                tools:ignore="TouchTargetSizeCheck"
                 />
 
+            <View
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:foreground="@drawable/closeicon" />
+
         </LinearLayout>
+
         <View
             android:layout_width="18dp"
-            android:layout_marginLeft="25dp"
             android:layout_height="18dp"
-            android:foreground="@drawable/filter"
             android:layout_gravity="center"
-            />
+            android:layout_marginLeft="25dp"
+            android:foreground="@drawable/filter" />
 
     </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:divider="@drawable/ic_launcher_foreground"
-                    android:orientation="vertical"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/white_background"
-                    >
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:divider="@drawable/ic_launcher_foreground"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/white_background"
-                        >
-                    <View
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:foreground="@drawable/time_circle"
-                        android:layout_gravity="center"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="17dp"
-                        android:text="Salad"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/recyclerView"
+        android:background="@drawable/white_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-                        <View
-                            android:layout_marginLeft="300dp"
-                            android:layout_width="14dp"
-                            android:layout_height="14dp"
-                            android:foreground="@drawable/vector__1_"
-                            android:layout_gravity="center"/>
-                             </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:divider="@drawable/ic_launcher_foreground"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/white_background"
-                        >
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:foreground="@drawable/time_circle"
-                            android:layout_gravity="center"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:text="Salad"/>
-
-                        <View
-                            android:layout_marginLeft="300dp"
-                            android:layout_width="14dp"
-                            android:layout_height="14dp"
-                            android:foreground="@drawable/vector__1_"
-                            android:layout_gravity="center"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:divider="@drawable/ic_launcher_foreground"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/white_background"
-                        >
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:foreground="@drawable/time_circle"
-                            android:layout_gravity="center"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="17dp"
-                            android:text="Salad"/>
-
-                        <View
-                            android:layout_marginLeft="300dp"
-                            android:layout_width="14dp"
-                            android:layout_height="14dp"
-                            android:foreground="@drawable/vector__1_"
-                            android:layout_gravity="center"/>
-                    </LinearLayout>
-
-
-
-                </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:divider="@drawable/ic_launcher_foreground"
-            android:orientation="vertical"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/white_background"
-            >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/white_background"
+        android:divider="@drawable/ic_launcher_foreground"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:text="Search suggestions"
-            android:textStyle="bold"
-            android:textSize="17dp"/>
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/white_background"
+            android:divider="@drawable/ic_launcher_foreground"
+            android:orientation="horizontal">
+
             <LinearLayout
-                android:layout_marginLeft="27dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:divider="@drawable/ic_launcher_foreground"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/white_background"
-                >
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/greyball_background"
-                    >
+                android:background="@drawable/greyball_background">
 
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
                     android:layout_marginRight="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="sushi" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/greyball_background">
+
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="sushi"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/greyball_background"
-                    >
-
-
-                    <TextView
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginRight="30dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="sandwich"/>
-                </LinearLayout>
-
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="sandwich" />
+            </LinearLayout>
 
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/white_background"
+            android:divider="@drawable/ic_launcher_foreground"
+            android:orientation="horizontal">
+
             <LinearLayout
-                android:layout_marginLeft="27dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:divider="@drawable/ic_launcher_foreground"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/white_background"
-                >
-                <LinearLayout
+                android:background="@drawable/greyball_background">
+
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/greyball_background"
-                    >
-
-
-                    <TextView
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginRight="30dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="seafood"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/greyball_background"
-                    >
-
-
-                    <TextView
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:layout_marginRight="30dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="fried rice"/>
-                </LinearLayout>
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="seafood" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/greyball_background">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="fried rice" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
