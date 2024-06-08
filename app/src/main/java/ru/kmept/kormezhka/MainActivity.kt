@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             imageView.setImageResource(currImage)*/
         }
         noti_tab.setOnClickListener {
-            switchFragment(Noti())
+            jopa(it)
             /*currImage = if (currImage == home_green) home_gray or noti_green or profile_gray else home_green
             imageView.setImageResource(currImage)*/
         }
@@ -63,9 +63,10 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.switcherFragment, fragment)
         transaction.commit()
     }
-    fun gotonextpage(view: View)
+    fun jopa(view: View)
     {
-        val intent = Intent(this@MainActivity, searchclass::class.java)
+        val intent = Intent(this@MainActivity, Akaunt::class.java)
         startActivity(intent)
     }
+
 }
