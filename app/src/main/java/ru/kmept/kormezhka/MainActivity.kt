@@ -2,6 +2,7 @@ package ru.kmept.kormezhka
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -61,5 +62,10 @@ class MainActivity : AppCompatActivity() {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.switcherFragment, fragment)
         transaction.commit()
+    }
+    fun gotonextpage(view: View)
+    {
+        val intent = Intent(this@MainActivity, searchclass::class.java)
+        startActivity(intent)
     }
 }

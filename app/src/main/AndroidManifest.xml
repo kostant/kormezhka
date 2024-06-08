@@ -24,9 +24,9 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".main_screen">
-        </activity>
+        <activity android:name=".main_screen"/>
+        <activity android:name=".searchclass"/>
+
     </application>
 
 </manifest>
