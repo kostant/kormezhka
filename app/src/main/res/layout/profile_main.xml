@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="Profile">
 
 
     <LinearLayout
@@ -13,43 +13,43 @@
         android:orientation="horizontal">
     </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="375dp"
+    <LinearLayout
+        android:layout_width="375dp"
+        android:layout_height="24dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
             android:layout_height="24dp"
-            android:orientation="horizontal">
+            android:layout_marginLeft="24dp"
+            android:background="@drawable/arrow_ios_back_outline__1__1">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginLeft="24dp"
-                android:background="@drawable/arrow_ios_back_outline__1__1">
+        </ImageView>
 
-            </ImageView>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="279dp"
+            android:background="@drawable/share__4__1">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginLeft="279dp"
-                android:background="@drawable/share__4__1">
+        </ImageView>
+    </LinearLayout>
 
-            </ImageView>
-        </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="375dp"
-                android:layout_height="176dp"
-                android:layout_marginTop="24dp"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="137dp"
-                    android:layout_marginTop="76dp"
-                    android:background="@drawable/avatar">
-                </ImageView>
+    <LinearLayout
+        android:layout_width="375dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="137dp"
+            android:layout_marginTop="76dp"
+            android:background="@drawable/avatar">
+        </ImageView>
 
 
-            </LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="375dp"
         android:layout_height="24dp"
@@ -83,16 +83,16 @@
 
         </TextView>
         <TextView
-        android:layout_width="33dp"
-        android:layout_height="27dp"
-        android:text="782"
-        android:textStyle="bold"
-        android:layout_marginLeft="77dp"
-        android:textSize="17dp"
-        android:textColor="#3E5481"
-        >
+            android:layout_width="33dp"
+            android:layout_height="27dp"
+            android:text="782"
+            android:textStyle="bold"
+            android:layout_marginLeft="77dp"
+            android:textSize="17dp"
+            android:textColor="#3E5481"
+            >
 
-    </TextView>
+        </TextView>
         <TextView
             android:layout_width="47dp"
             android:layout_height="27dp"
@@ -146,15 +146,15 @@
         android:layout_width="375dp"
         android:layout_height="56dp"
         android:layout_marginTop="351dp">
-<Button
-    android:layout_width="263dp"
-    android:layout_height="56dp"
-    android:layout_marginLeft="56dp"
-    android:text="Follow"
-    android:backgroundTint="#1FCC79">
+        <Button
+            android:layout_width="263dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="56dp"
+            android:text="Follow"
+            android:backgroundTint="#1FCC79">
 
-</Button>
-</LinearLayout>
+        </Button>
+    </LinearLayout>
 
 
 </FrameLayout>
