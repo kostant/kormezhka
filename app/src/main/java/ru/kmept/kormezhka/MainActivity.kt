@@ -43,6 +43,8 @@ class MainActivity : AppCompatActivity() {
            imageView.setImageResource(currImage)*/
         }
         scan_tab.setOnClickListener {
+            val intent = Intent(this@MainActivity, searchclass::class.java)
+            startActivity(intent)
             switchFragment(Scan())
             /*currImage = if (currImage == home_green) home_gray or noti_gray or profile_gray  else home_green
             imageView.setImageResource(currImage)*/
@@ -63,9 +65,5 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.switcherFragment, fragment)
         transaction.commit()
     }
-    fun gotonextpage(view: View)
-    {
-        val intent = Intent(this@MainActivity, searchclass::class.java)
-        startActivity(intent)
-    }
+
 }
