@@ -6,10 +6,10 @@ import android.widget.TextView
 import java.util.Timer
 import java.util.TimerTask
 
-class MainActivity : AppCompatActivity() {
+class MailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.email_main)
         runTimer()
     }
     // Запускает таймер
