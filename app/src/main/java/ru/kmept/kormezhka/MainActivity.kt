@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        switchFragment(main_screen())
         setContentView(R.layout.home)
         imageView = findViewById(R.id.home1)
         val home_tab = findViewById<View>(R.id.home_tab)
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             imageView.setImageResource(currImage)*/
         }
         home_tab.setOnClickListener {
-           switchFragment(FragmentFirst())
+           switchFragment(main_screen())
            /*currImage = if (currImage == home_green) home_green or noti_gray or profile_gray  else home_green
            imageView.setImageResource(currImage)*/
         }
