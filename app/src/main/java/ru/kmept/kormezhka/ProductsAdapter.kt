@@ -8,6 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>() {
+
+    lateinit var onClickListener:((Product) -> Unit)
+
     var products: Array<Product> = ProductListProvider.provideProducts()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val view: View =
@@ -28,6 +31,10 @@ class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>() {
 
         val productImageView: ImageView = holder.itemView.findViewById(R.id.product_photo)
         productImageView.setImageResource(product.productPhoto)
+
+        holder.itemView.setOnClickListener{
+            onClickListener(product)
+        }
     }
 
     override fun getItemCount(): Int {

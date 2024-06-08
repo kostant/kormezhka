@@ -1,5 +1,6 @@
 package ru.kmept.kormezhka
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,6 +12,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import ru.kmept.kormezhka.data.model.Recipe
+import ru.kmept.kormezhka.recipe_detail.RecipeScreen
 
 class main_screen : Fragment() {
 
@@ -29,6 +32,9 @@ class main_screen : Fragment() {
 
         val adapter = ProductsAdapter()
         recyclerView.adapter = adapter
+        adapter.onClickListener = {
+
+        }
 
         val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(context, 2)
         recyclerView.layoutManager = layoutManager
