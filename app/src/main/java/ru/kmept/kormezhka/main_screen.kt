@@ -38,6 +38,15 @@ class main_screen : Fragment() {
         val button_drink = view.findViewById<Button>(R.id.button_drink)
 
         setButtonColor(button_add, button_food, button_drink)
+        updateScreenWithRecipes(adapter.recipes)
+
+
+
+    }
+    fun updateScreenWithRecipes(recipes: Array<Recipe>) {
+        // Обновить экран используя рецепты из массива recipes
+        adapter.recipes = recipes
+        adapter.notifyDataSetChanged()
     }
 
     private fun setButtonColor(vararg buttons: Button) {

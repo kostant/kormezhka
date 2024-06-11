@@ -120,4 +120,6 @@ class MainActivity : AppCompatActivity() {
             profileText.setTextColor(parseColor("#9FA5C0"))
         }
     }
+
+
 }
