@@ -21,9 +21,12 @@ class RecipeScreen : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        RecipesRepository.global.getById(1,{
-           adapter.recipe = it
+        val id = intent.getIntExtra("id",1)
+
+        RecipesRepository.global.getById(id,{ adapter.recipe = it
             adapter.notifyDataSetChanged()
-        } )
+        }
+
+        )
     }
 }
