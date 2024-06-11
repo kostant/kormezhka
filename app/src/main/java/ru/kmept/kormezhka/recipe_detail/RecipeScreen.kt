@@ -22,7 +22,8 @@ class RecipeScreen : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         RecipesRepository.global.getById(1,{
-
+           adapter.recipe = it
+            adapter.notifyDataSetChanged()
         } )
     }
 }

@@ -33,6 +33,9 @@ class main_screen : Fragment() {
         val adapter = ProductsAdapter()
         recyclerView.adapter = adapter
         adapter.onClickListener = {
+            val intent = Intent(context, RecipeScreen::class.java)
+            startActivity(intent)
+
 
         }
 

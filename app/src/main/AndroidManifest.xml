@@ -25,6 +25,7 @@
         </activity>
 
         <activity android:name=".main_screen"/>
+        <activity android:name=".recipe_detail.RecipeScreen"/>
         <activity android:name=".searchclass"/>
 
     </application>
