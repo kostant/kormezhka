@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_gravity="center"
+    android:text="Welcome"
+    android:textStyle="bold"
+    android:textSize="22sp"
+        android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:textColor="#9FA5C0"
+        android:layout_gravity="center"
+        android:text="Please enter your account here"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    
+    <LinearLayout
+        android:id="@+id/email"
+        android:background="@drawable/shape_border1"
+        android:layout_marginRight="24dp"
+    android:layout_marginLeft="24dp"
+    android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="56sp">
+        
+        <ImageView
+            android:background="@drawable/message"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="24dp"
+            android:layout_width="24sp"
+            android:layout_height="24sp">
+
+        </ImageView>
+        
+        <EditText
+            android:hint="Email or phone number"
+            android:backgroundTint="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="56sp">
+
+        </EditText>
+        
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/shape_border1"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="56sp">
+
+        <ImageView
+            android:background="@drawable/lock"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="24dp"
+            android:layout_width="24sp"
+            android:layout_height="24sp">
+
+        </ImageView>
+
+        <EditText
+            android:id="@+id/passEditText"
+            android:hint="Password"
+            android:backgroundTint="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="56sp">
+
+        </EditText>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="Your Password must contain:"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <ImageView
+            android:id="@+id/checkPassLen"
+            android:background="@drawable/group_28"
+            android:layout_width="24sp"
+            android:layout_height="24sp">
+
+        </ImageView>
+
+        <TextView
+            android:textColor="#9FA5C0"
+            android:layout_marginLeft="8dp"
+            android:text="Atleast 6 characters"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TextView>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/checkPassNum"
+            android:background="@drawable/group_28"
+            android:layout_width="24sp"
+            android:layout_height="24sp">
+
+        </ImageView>
+
+        <TextView
+            android:textColor="#9FA5C0"
+            android:layout_marginLeft="8dp"
+            android:text="Contains a number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <Button
+        android:onClick="SignUpClick"
+        android:backgroundTint="#1FCC79"
+        android:text="Sign Up"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="56sp">
+
+    </Button>
+
+</LinearLayout>
