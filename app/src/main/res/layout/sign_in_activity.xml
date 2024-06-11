@@ -98,18 +98,21 @@
             android:textColor="@color/black"
             android:textSize="15sp"
             android:maxLines="1"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:layout_weight="1">
 
         </EditText>
 
         <ImageView
+            android:id="@+id/EyePasswd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/show"
+            android:src="@drawable/hide"
             android:layout_gravity="center_vertical"
             android:layout_marginRight="24dp"
-            android:layout_marginLeft="10dp">
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:onClick="onClickEye">
         </ImageView>
 
     </LinearLayout>
