@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -26,7 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="27dp"
         android:text="2"
-        android:layout_gravity="right"/>
+        android:layout_gravity="right"
+        android:layout_marginRight="5dp"/>
 
 
 </FrameLayout>
@@ -43,7 +44,7 @@
         android:layout_width="327dp"
         android:layout_height="161dp"
         android:layout_gravity="center"
-        android:backgroundTint="#D0DBEA"
+        android:background="@drawable/polska"
         android:orientation="vertical">
 
         <ImageView
@@ -67,14 +68,10 @@
         <TextView
             android:layout_width="82dp"
             android:layout_height="15dp"
+            android:layout_gravity="center"
             android:text="(up to 12 Mb)"
-            android:textSize="12sp"
             android:textColor="#9FA5C0"
-            android:layout_gravity="center">
-        </TextView>
-
-
-
+            android:textSize="12sp"></TextView>
 
 
     </LinearLayout>
@@ -98,9 +95,9 @@
         <EditText
             android:layout_width="327dp"
             android:layout_height="56dp"
-            android:layout_marginLeft="24dp"
-            android:hint="Enter food name"
-            android:background="@null"/>
+            android:layout_marginLeft="28dp"
+            android:hint="   Enter food name"
+            android:background="@drawable/line"/>
 
 
 
@@ -125,8 +122,8 @@
             android:layout_width="327dp"
             android:layout_height="80dp"
             android:layout_marginLeft="24dp"
-            android:hint="Tell a little about your food"
-            android:background="@null"/>
+            android:hint="   Tell a little about your food"
+            android:background="@drawable/line2"/>
 
 
 
