@@ -22,10 +22,10 @@ class SignInActivity : AppCompatActivity() {
 
         if (Pass.inputType == TYPE_CLASS_TEXT or TYPE_TEXT_VARIATION_PASSWORD) {
             Pass.setInputType(TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
-            Eye.setImageResource(R.drawable.show)
+            Eye.setImageResource(R.drawable.hide)
         } else {
             Pass.setInputType(TYPE_CLASS_TEXT or TYPE_TEXT_VARIATION_PASSWORD)
-            Eye.setImageResource(R.drawable.hide)
+            Eye.setImageResource(R.drawable.show)
         }
     }
 }
