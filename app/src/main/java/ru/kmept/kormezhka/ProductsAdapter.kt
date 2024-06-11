@@ -28,11 +28,9 @@ class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>() {
         productNameTextView.setText(recipe.name)
 
         val userImageView: ImageView = holder.itemView.findViewById(R.id.user_photo)
-        userImageView.setImageResource(recipe.author.avatarUrl)
         Picasso.get().load(recipe.author.avatarUrl).into(userImageView)
 
         val productImageView: ImageView = holder.itemView.findViewById(R.id.product_photo)
-        productImageView.setImageResource(recipe.pictureUrl)
         Picasso.get().load(recipe.pictureUrl).into(productImageView)
     }
 
