@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        switchFragment(main_screen())
         setContentView(R.layout.home)
         imageView = findViewById(R.id.homeImageView)
         val home_tab = findViewById<View>(R.id.home_tab)
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             updateTabs(1)
         }
         home_tab.setOnClickListener {
-           switchFragment(FragmentFirst())
+           switchFragment(main_screen())
             updateTabs(0)
         }
         scan_tab.setOnClickListener {
