@@ -11,13 +11,13 @@ import org.jetbrains.annotations.NotNull
 import kotlin.math.sign
 
 
-class UsersAdapter: RecyclerView.Adapter<UserViewHolder>() {
+class Adapter: RecyclerView.Adapter<SearchHistoryItemViewHolder>() {
     var list:ArrayList<String> = ArrayList()
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchHistoryItemViewHolder {
 
         // Здесь необходимо создать ViewHolder используя файл верстки
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_user, parent, false)
-        return UserViewHolder(itemView)
+        return SearchHistoryItemViewHolder (itemView)
     }
 
     override fun getItemCount(): Int {
@@ -30,10 +30,11 @@ class UsersAdapter: RecyclerView.Adapter<UserViewHolder>() {
     {
         list.add(text)
     }
-    override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SearchHistoryItemViewHolder, position: Int) {
         // Здесь будет логика, которая будет конфигурировать конкретную ячейку и выставлять
         // нужную аватарку имя и тд
         // Пока оставляем пустым
-        holder.nameTextView.setText(list[position])
+
+            holder.SetText(list[position])
     }
 }
