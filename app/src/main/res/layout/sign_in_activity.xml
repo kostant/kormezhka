@@ -197,6 +197,7 @@
         </TextView>
 
         <TextView
+            android:onClick="onClickSignUp"
             android:id="@+id/SignInSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
