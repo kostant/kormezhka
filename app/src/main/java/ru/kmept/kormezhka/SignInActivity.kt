@@ -25,7 +25,7 @@ class SignInActivity : AppCompatActivity() {
             Eye.setImageResource(R.drawable.hide)
         } else {
             Pass.setInputType(TYPE_CLASS_TEXT or TYPE_TEXT_VARIATION_PASSWORD)
-            Eye.setImageResource(R.drawable.show)
+            Eye.setImageResource(R.drawable.show1)
         }
     }
 }
