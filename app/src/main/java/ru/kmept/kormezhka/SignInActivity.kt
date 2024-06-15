@@ -1,5 +1,6 @@
 package ru.kmept.kormezhka
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
 import android.text.InputType.TYPE_CLASS_TEXT
@@ -27,5 +28,10 @@ class SignInActivity : AppCompatActivity() {
             Pass.setInputType(TYPE_CLASS_TEXT or TYPE_TEXT_VARIATION_PASSWORD)
             Eye.setImageResource(R.drawable.show1)
         }
+    }
+
+    fun onClickLogIn(view: View) {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 }

@@ -144,8 +144,8 @@
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         android:textColor="@color/white"
-        android:backgroundTint="#1FCC79">
-<!--    android:onClick="" На будущее-->
+        android:backgroundTint="#1FCC79"
+        android:onClick="onClickLogIn">
 
     </Button>
 

@@ -18,7 +18,7 @@
 
 
         <activity
-            android:name=".MainActivity"
+            android:name=".SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +27,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".MainActivity"/>
         <activity android:name=".main_screen"/>
         <activity android:name=".searchclass"/>
         <activity android:name=".StartRegActivity"/>
