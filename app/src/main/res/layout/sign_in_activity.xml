@@ -146,7 +146,6 @@
         android:textColor="@color/white"
         android:backgroundTint="#1FCC79"
         android:onClick="onClickLogIn">
-<!--    android:onClick="" На будущее-->
 
     </Button>
 
