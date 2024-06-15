@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 
-class Profile: Fragment() {
+class FragmentSecond: Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.profile, container, false)
+        return inflater.inflate(R.layout.second, container, false)
     }
 }
