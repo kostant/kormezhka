@@ -45,12 +45,13 @@ class MainActivity : AppCompatActivity() {
             updateTabs(0)
         }
         scan_tab.setOnClickListener {
-            val intent = Intent(this@MainActivity, searchclass::class.java)
+            val intent = Intent(this@MainActivity, Akaunt::class.java)
             startActivity(intent)
             switchFragment(Scan())
             updateTabs(2)
         }
         noti_tab.setOnClickListener {
+            perehod(it)
             switchFragment(Noti())
             updateTabs(3)
         }
@@ -122,6 +123,9 @@ class MainActivity : AppCompatActivity() {
             profileText.setTextColor(parseColor("#9FA5C0"))
         }
     }
+    fun perehod(view: View) {
+        val intent = Intent(this@MainActivity, Akaunt::class.java)
+        startActivity(intent)
 
-
+    }
 }
