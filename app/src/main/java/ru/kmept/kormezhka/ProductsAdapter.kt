@@ -13,6 +13,8 @@ import ru.kmept.kormezhka.data.model.Recipe
 
 
 class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>() {
+
+    lateinit var onClickListener:((Recipe) -> Unit)
     var recipes: Array<Recipe> = emptyArray()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val view: View =
@@ -39,6 +41,10 @@ class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>() {
 
         val productImageView: ImageView = holder.itemView.findViewById(R.id.product_photo)
         Picasso.get().load(recipe.pictureUrl).transform(transformation).into(productImageView)
+
+        holder.itemView.setOnClickListener{
+            onClickListener(recipe)
+        }
     }
 
     override fun getItemCount(): Int {
