@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-
+    implementation ("com.google.android.material:material:1.4.0")
     implementation ("jp.wasabeef:picasso-transformations:2.4.0")
     implementation ("com.squareup.picasso:picasso:2.8")
     implementation("androidx.core:core-ktx:1.9.0")

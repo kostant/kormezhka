@@ -40,7 +40,7 @@ class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>() {
         Picasso.get().load(recipe.author.avatarUrl).transform(transformation).into(userImageView)
 
         val productImageView: ImageView = holder.itemView.findViewById(R.id.product_photo)
-        Picasso.get().load(recipe.pictureUrl).transform(transformation).into(productImageView)
+        Picasso.get().load(recipe.pictureUrl).into(productImageView)
 
         holder.itemView.setOnClickListener{
             onClickListener(recipe)
