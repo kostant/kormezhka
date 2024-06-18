@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.sign_in_activity)
+    setContentView(R.layout.sign_in_activity)
     }
 
     fun onClickEye(view: View) {
