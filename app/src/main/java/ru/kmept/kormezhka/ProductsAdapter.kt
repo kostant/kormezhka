@@ -39,6 +39,11 @@ class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>() {
 
         val productImageView: ImageView = holder.itemView.findViewById(R.id.product_photo)
         Picasso.get().load(recipe.pictureUrl).transform(transformation).into(productImageView)
+
+
+
+        val productDescription: TextView = holder.itemView.findViewById(R.id.description)
+        productDescription.setText(recipe.description + " ~ " + recipe.duration.toString() + " mins")
     }
 
     override fun getItemCount(): Int {
