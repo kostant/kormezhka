@@ -42,8 +42,8 @@ class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>() {
 
 
 
-        val productDescription: TextView = holder.itemView.findViewById(R.id.description)
-        productDescription.setText(recipe.description + " ~ " + recipe.duration.toString() + " mins")
+        val productDuration: TextView = holder.itemView.findViewById(R.id.duration)
+        productDuration.setText( ">" + recipe.duration.toString() + " mins")
     }
 
     override fun getItemCount(): Int {
