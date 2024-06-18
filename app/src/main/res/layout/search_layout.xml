@@ -39,7 +39,8 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="25dp"
                 android:foreground="@drawable/vector"
-                android:onClick="search"/>
+                android:onClick="search"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <EditText
                 android:id="@+id/searchbandle"
@@ -50,14 +51,16 @@
                 android:background="#00FFFFFF"
                 android:hint="Введите запрос"
                 tools:ignore="TouchTargetSizeCheck"
-                />
+                android:singleLine="true" />
 
             <View
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="2dp"
-                android:foreground="@drawable/closeicon" />
+                android:foreground="@drawable/closeicon"
+                android:onClick="clearthesearch"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
         </LinearLayout>
 
@@ -78,6 +81,7 @@
         android:layout_height="wrap_content"/>
 
     <LinearLayout
+        android:id="@+id/searchhelper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"

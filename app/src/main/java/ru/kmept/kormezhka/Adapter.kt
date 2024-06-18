@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.ListView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
@@ -13,6 +14,7 @@ import kotlin.math.sign
 
 class Adapter: RecyclerView.Adapter<SearchHistoryItemViewHolder>() {
     var list:ArrayList<String> = ArrayList()
+    lateinit var searchLine:EditText
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SearchHistoryItemViewHolder {
 
         // Здесь необходимо создать ViewHolder используя файл верстки
@@ -34,7 +36,11 @@ class Adapter: RecyclerView.Adapter<SearchHistoryItemViewHolder>() {
         // Здесь будет логика, которая будет конфигурировать конкретную ячейку и выставлять
         // нужную аватарку имя и тд
         // Пока оставляем пустым
+            holder.itemView.setOnClickListener {
 
+                searchLine.setText(list[position])
+
+            }
             holder.SetText(list[position])
     }
 }

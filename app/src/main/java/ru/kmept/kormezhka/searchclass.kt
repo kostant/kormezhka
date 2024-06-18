@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -15,18 +16,13 @@ class searchclass : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView
     var adapter = Adapter()
     lateinit var serch_line:EditText;
+     lateinit var searchhelper:LinearLayout;
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.search_layout)
         serch_line = findViewById(R.id.searchbandle)
-        val firstfood =  findViewById<TextView>(R.id.sushi1)
-        val secondfood =  findViewById<TextView>(R.id.sandwich2)
-        val thirdfood =  findViewById<TextView>(R.id.seafood3)
-        val fourfood =  findViewById<TextView>(R.id.sushi1)
-
-        var nameTextView: TextView
-        val itemSearchInTextbox: TextView
+        adapter.searchLine = serch_line
 
         // получаем ссылку на RecyclerView
          recyclerView = findViewById(R.id.recyclerView)
@@ -46,9 +42,26 @@ class searchclass : AppCompatActivity() {
 
     fun search(view: View)
     {
-        val itemSearchInTextbox: TextView = findViewById(R.id.searchbandle)
-        adapter.Add(itemSearchInTextbox.text.toString());
-        adapter.notifyDataSetChanged()
+        if (serch_line.getText().toString().trim().length == 0)
+        {
+            serch_line.setHint("Пустое поле");
+        }
+        else
+        {
+            val itemSearchInTextbox: TextView = findViewById(R.id.searchbandle)
+            adapter.Add(itemSearchInTextbox.text.toString());
+            adapter.notifyDataSetChanged()
+            serch_line.setHint("Введите запрос");
+
+            searchhelper = findViewById(R.id.searchhelper)
+            searchhelper.isVisible = false
+        }
+
+    }
+
+    fun clearthesearch(view: View)
+    {   serch_line.setText("");
+        serch_line.setHint("Введите запрос");
     }
     fun first_offer(view: View)
     {
