@@ -6,8 +6,10 @@ import android.text.InputType
 import android.text.InputType.TYPE_CLASS_TEXT
 import android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -32,6 +34,11 @@ class SignInActivity : AppCompatActivity() {
 
     fun onClickLogIn(view: View) {
         val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun onClickSignUp(view: View) {
+        val intent = Intent(this, StartRegActivity::class.java)
         startActivity(intent)
     }
 }
