@@ -4,7 +4,7 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 import retrofit2.Call
 
-interface ApiService {
+interface ApiServiceLog {
     @POST("log/")
-    fun logUser(@Body user: User): Call<LogInResponse>
+    fun logUser(@Body userLog: UserLog): Call<LogInResponse>
 }

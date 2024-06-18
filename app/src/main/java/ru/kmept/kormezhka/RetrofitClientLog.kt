@@ -13,7 +13,7 @@ object RetrofitClientLog {
             .build()
     }
 
-    val apiService: ApiService by lazy {
-        retrofit.create(ApiService::class.java)
+    val apiServiceLog: ApiServiceLog by lazy {
+        retrofit.create(ApiServiceLog::class.java)
     }
 }

@@ -1,6 +1,6 @@
 package ru.kmept.kormezhka
 
-data class User(
+data class UserLog(
     val login: String,
     val password: String
 )

@@ -1,17 +1,14 @@
 package ru.kmept.kormezhka
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
 import android.text.InputType.TYPE_CLASS_TEXT
 import android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
-import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.ActionBarContextView
 import com.google.android.material.snackbar.Snackbar
 import retrofit2.Call
 import retrofit2.Callback
@@ -40,8 +37,8 @@ class SignInActivity : AppCompatActivity(), Callback<LogInResponse> {
     fun onClickLogIn(view: View) {
         val Log = findViewById<EditText>(R.id.SignInLogin)
         val Pass = findViewById<EditText>(R.id.SignInPasswd)
-        val user = User(Log.text.toString(), Pass.text.toString())
-        RetrofitClientLog.apiService.logUser(user).enqueue(this)
+        val userLog = UserLog(Log.text.toString(), Pass.text.toString())
+        RetrofitClientLog.apiServiceLog.logUser(userLog).enqueue(this)
     }
 
     override fun onResponse(p0: Call<LogInResponse>, p1: Response<LogInResponse>) {
