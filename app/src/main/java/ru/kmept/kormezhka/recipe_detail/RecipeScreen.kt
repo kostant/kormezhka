@@ -17,7 +17,6 @@ class RecipeScreen : AppCompatActivity() {
         val adapter = ProductAdapter()
         recyclerView.adapter = adapter
 
-
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = LinearLayoutManager(this)
 

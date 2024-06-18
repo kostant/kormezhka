@@ -1,19 +1,22 @@
 package ru.kmept.kormezhka
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
 import android.text.InputType.TYPE_CLASS_TEXT
 import android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
 class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.sign_in_activity)
+    setContentView(R.layout.sign_in_activity)
     }
 
     fun onClickEye(view: View) {
@@ -27,5 +30,15 @@ class SignInActivity : AppCompatActivity() {
             Pass.setInputType(TYPE_CLASS_TEXT or TYPE_TEXT_VARIATION_PASSWORD)
             Eye.setImageResource(R.drawable.show1)
         }
+    }
+
+    fun onClickLogIn(view: View) {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun onClickSignUp(view: View) {
+        val intent = Intent(this, StartRegActivity::class.java)
+        startActivity(intent)
     }
 }
