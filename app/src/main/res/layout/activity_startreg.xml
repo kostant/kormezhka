@@ -44,17 +44,18 @@
             android:layout_height="24sp">
 
         </ImageView>
-        
+
         <EditText
-            android:hint="Email or phone number"
-            android:backgroundTint="@color/white"
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="56sp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="56sp">
+            android:backgroundTint="@color/white"
+            android:hint="Email or phone number">
 
         </EditText>
-        
+
     </LinearLayout>
 
 
@@ -155,7 +156,7 @@
     </LinearLayout>
 
     <Button
-        android:onClick="SignUpClick"
+        android:onClick="onClick"
         android:backgroundTint="#1FCC79"
         android:text="Sign Up"
         android:layout_marginTop="23dp"
