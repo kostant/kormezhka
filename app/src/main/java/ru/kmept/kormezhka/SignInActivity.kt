@@ -54,6 +54,6 @@ class SignInActivity : AppCompatActivity(), Callback<LogInResponse> {
 
     override fun onFailure(p0: Call<LogInResponse>, p1: Throwable) {
         //Log.d("KMEPT", p1.localizedMessage)
-        Snackbar.make(findViewById(android.R.id.content),"Провал", Snackbar.LENGTH_LONG).show()
+        Snackbar.make(findViewById(android.R.id.content),"Неверный Логин или пароль", Snackbar.LENGTH_LONG).show()
     }
 }
