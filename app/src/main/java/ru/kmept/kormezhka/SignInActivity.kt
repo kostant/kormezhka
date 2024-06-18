@@ -1,17 +1,24 @@
 package ru.kmept.kormezhka
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
 import android.text.InputType.TYPE_CLASS_TEXT
 import android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.ActionBarContextView
+import com.google.android.material.snackbar.Snackbar
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
-class SignInActivity : AppCompatActivity() {
+class SignInActivity : AppCompatActivity(), Callback<LogInResponse> {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sign_in_activity)
@@ -31,7 +38,22 @@ class SignInActivity : AppCompatActivity() {
     }
 
     fun onClickLogIn(view: View) {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
+        val Log = findViewById<EditText>(R.id.SignInLogin)
+        val Pass = findViewById<EditText>(R.id.SignInPasswd)
+        val user = User(Log.text.toString(), Pass.text.toString())
+        RetrofitClientLog.apiService.logUser(user).enqueue(this)
+    }
+
+    override fun onResponse(p0: Call<LogInResponse>, p1: Response<LogInResponse>) {
+        val model = p1.body()
+        if (model?.logStatus == 1) {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onFailure(p0: Call<LogInResponse>, p1: Throwable) {
+        //Log.d("KMEPT", p1.localizedMessage)
+        Snackbar.make(findViewById(android.R.id.content),"Провал", Snackbar.LENGTH_LONG).show()
     }
 }
