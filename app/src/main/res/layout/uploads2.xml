@@ -28,14 +28,70 @@
            android:layout_height="wrap_content"
            android:layout_marginLeft="237dp"
            android:layout_marginTop="19dp"
-           android:src="@drawable/two">
+           android:src="@drawable/one">
        </ImageView>
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/spisok">
-    </androidx.recyclerview.widget.RecyclerView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="21.65dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="24dp"
+        android:textSize="15sp"
+        android:hint="Enter ingredient"
+        android:outlineProvider="none"
+        android:id="@+id/ROOT"
+        android:background="@drawable/shep"
+        android:paddingLeft="24dp">
+    </EditText>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="18dp"
+        android:text="Steps"
+        android:textSize="17sp"
+        android:textStyle="bold">
+    </TextView>
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="112dp"
+        android:orientation="vertical"
+        android:background="@drawable/shep2"
+        android:layout_marginTop="19dp"
+        android:layout_marginLeft="30dp"
+        >
+        <EditText
+            android:layout_width="263dp"
+            android:layout_height="80dp"
+            android:textSize="12sp"
+            android:hint="Tell a little about your food"
+            android:outlineProvider="none"
+            android:background="@null"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="left">
+
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="290dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:background=""
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#1FCC79"
+            android:text="Next"
+            android:textSize="15sp">
+        </Button>
+    </LinearLayout>
 
 </LinearLayout>
