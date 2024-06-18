@@ -31,7 +31,7 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".main_screen"/>
         <activity android:name=".searchclass"/>
-
+        <activity android:name=".MailActivity"/>
     </application>
 
 </manifest>
