@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     val avatarImageView: ImageView
-    val avatar2ImageView: ImageView
+
     val nameTextView: TextView
     fun SetText(Text:String)
     {
@@ -16,7 +16,7 @@ class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     }
     init {
         avatarImageView = itemView.findViewById(R.id.avatarImageView)
-        avatar2ImageView = itemView.findViewById(R.id.avatar2ImageView)
+
         nameTextView = itemView.findViewById(R.id.nameTextView)
     }
 
