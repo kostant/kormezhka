@@ -46,6 +46,8 @@ class MainActivity : AppCompatActivity() {
             updateTabs(0)
         }
         scan_tab.setOnClickListener {
+            val intent = Intent(this@MainActivity, searchclass::class.java)
+            startActivity(intent)
             switchFragment(Scan())
             updateTabs(2)
         }

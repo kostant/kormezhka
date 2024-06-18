@@ -11,9 +11,12 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import ru.kmept.kormezhka.data.RecipesRepository
+import ru.kmept.kormezhka.data.model.Recipe
 
 class main_screen : Fragment() {
 
+    val adapter = ProductsAdapter()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,7 +30,7 @@ class main_screen : Fragment() {
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler)
 
-        val adapter = ProductsAdapter()
+
         recyclerView.adapter = adapter
 
         val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(context, 2)
@@ -38,6 +41,17 @@ class main_screen : Fragment() {
         val button_drink = view.findViewById<Button>(R.id.button_drink)
 
         setButtonColor(button_add, button_food, button_drink)
+        RecipesRepository.global.getAllRecipes {
+            updateScreenWithRecipes(it)
+        }
+
+
+    }
+
+    fun updateScreenWithRecipes(recipes: Array<Recipe>) {
+        // Обновить экран используя рецепты из массива recipes
+        adapter.recipes = recipes
+        adapter.notifyDataSetChanged()
     }
 
     private fun setButtonColor(vararg buttons: Button) {
