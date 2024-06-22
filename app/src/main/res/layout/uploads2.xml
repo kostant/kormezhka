@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar">
+    </ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="22dp"
+            android:textSize="17sp"
+            android:textColor="#FF6464"
+            android:text="Cancel">
+        </TextView>
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="237dp"
+           android:layout_marginTop="19dp"
+           android:src="@drawable/one">
+       </ImageView>
+    </LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="21.65dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="24dp"
+        android:textSize="15sp"
+        android:hint="Enter ingredient"
+        android:outlineProvider="none"
+        android:id="@+id/ROOT"
+        android:background="@drawable/shep"
+        android:paddingLeft="24dp">
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="18dp"
+        android:text="Steps"
+        android:textSize="17sp"
+        android:textStyle="bold">
+    </TextView>
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="112dp"
+        android:orientation="vertical"
+        android:background="@drawable/shep2"
+        android:layout_marginTop="19dp"
+        android:layout_marginLeft="30dp"
+        >
+        <EditText
+            android:layout_width="263dp"
+            android:layout_height="80dp"
+            android:textSize="12sp"
+            android:hint="Tell a little about your food"
+            android:outlineProvider="none"
+            android:background="@null"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="left">
+
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="290dp"
+        android:layout_marginLeft="40dp">
+        <Button
+            android:layout_width="156dp"
+            android:layout_height="56dp"
+            android:textSize="15sp"
+            android:backgroundTint="#F4F5F7"
+            android:textColor="@color/black"
+            android:text="Back"
+           >
+
+        </Button>
+
+        <Button
+            android:layout_width="156dp"
+            android:layout_height="56dp"
+            android:backgroundTint="#1FCC79"
+            android:text="Next"
+            android:textSize="15sp"
+            android:layout_marginLeft="15dp">
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
