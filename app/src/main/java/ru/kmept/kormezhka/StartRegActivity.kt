@@ -1,12 +1,14 @@
 package ru.kmept.kormezhka
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.KeyEvent
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -91,7 +93,12 @@ class StartRegActivity() : AppCompatActivity(), TextWatcher, Callback<Registrati
         var hasDigit = false
         val emailEditText: EditText = findViewById(R.id.emailEditText)
         val passEditText: EditText = findViewById(R.id.passEditText)
+        val buttonSignIn: Button = findViewById(R.id.ButtonSignIn)
 
+        buttonSignIn.setEnabled(false)
+        buttonSignIn.setBackgroundColor(Color.GRAY);
+        buttonSignIn.setTextColor(Color.BLACK);
+        buttonSignIn.setText("Loading...")
         for (c in passEditText.text) {
             if (c.isDigit()) {
                 hasDigit = true
@@ -104,6 +111,10 @@ class StartRegActivity() : AppCompatActivity(), TextWatcher, Callback<Registrati
         }
         else {
             Snackbar.make(findViewById(android.R.id.content), "Пароль не подходит", 6000).show()
+            buttonSignIn.setEnabled(true)
+            buttonSignIn.setBackgroundColor(Color.parseColor("#1FCC79"));
+            buttonSignIn.setTextColor(Color.WHITE);
+            buttonSignIn.setText("Sign Up")
         }
 
 
@@ -111,13 +122,19 @@ class StartRegActivity() : AppCompatActivity(), TextWatcher, Callback<Registrati
     }
 
     override fun onResponse(call: Call<RegistrationResponse>, response: Response<RegistrationResponse>) {
+        val buttonSignIn: Button = findViewById(R.id.ButtonSignIn)
         val model = response.body()
         if (model?.regStatus == 1) {
-            val intent = Intent(this, SignInActivity::class.java)
-            startActivity(intent)
+            //val intent = Intent(this, SignInActivity::class.java)
+            //startActivity(intent)
+            finish()
         }
         else {
             Snackbar.make(findViewById(android.R.id.content), "Не успешно", 6000).show()
+            buttonSignIn.setEnabled(true)
+            buttonSignIn.setBackgroundColor(Color.parseColor("#1FCC79"));
+            buttonSignIn.setTextColor(Color.WHITE);
+            buttonSignIn.setText("Sign Up")
         }
 
     }
@@ -125,7 +142,12 @@ class StartRegActivity() : AppCompatActivity(), TextWatcher, Callback<Registrati
 
 
     override fun onFailure(call: Call<RegistrationResponse>, t: Throwable) {
+        val buttonSignIn: Button = findViewById(R.id.ButtonSignIn)
         Snackbar.make(findViewById(android.R.id.content), "Ошибка", 6000).show()
+        buttonSignIn.setEnabled(true)
+        buttonSignIn.setBackgroundColor(Color.GREEN);
+        buttonSignIn.setTextColor(Color.WHITE);
+        buttonSignIn.setText("Sign Up")
     }
 
 

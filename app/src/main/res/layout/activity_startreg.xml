@@ -156,6 +156,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/ButtonSignIn"
         android:onClick="onClick"
         android:backgroundTint="#1FCC79"
         android:text="Sign Up"
