@@ -7,9 +7,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
 import ru.kmept.kormezhka.data.model.Recipe
 
+
+
 class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>() {
+
+    lateinit var onClickListener:((Recipe) -> Unit)
     var recipes: Array<Recipe> = emptyArray()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val view: View =
@@ -19,6 +24,10 @@ class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>() {
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
         val recipe: Recipe = recipes[position]
+        val radius = 90
+        val radius2 = 160
+        val transformation = RoundedCornersTransformation(radius, 0, RoundedCornersTransformation.CornerType.ALL)
+        val transformation2 = RoundedCornersTransformation(radius2, 0, RoundedCornersTransformation.CornerType.ALL)
 
 
         val userNameTextView: TextView = holder.itemView.findViewById(R.id.user_name)
@@ -28,10 +37,14 @@ class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>() {
         productNameTextView.setText(recipe.name)
 
         val userImageView: ImageView = holder.itemView.findViewById(R.id.user_photo)
-        Picasso.get().load(recipe.author.avatarUrl).into(userImageView)
+        Picasso.get().load(recipe.author.avatarUrl).transform(transformation).into(userImageView)
 
         val productImageView: ImageView = holder.itemView.findViewById(R.id.product_photo)
-        Picasso.get().load(recipe.pictureUrl).into(productImageView)
+        Picasso.get().load(recipe.pictureUrl).transform(transformation).into(productImageView)
+
+        holder.itemView.setOnClickListener{
+            onClickListener(recipe)
+        }
     }
 
     override fun getItemCount(): Int {
