@@ -48,7 +48,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
                 android:background="#00FFFFFF"
-                android:hint="введите запрос"
+                android:hint="Введите запрос"
                 tools:ignore="TouchTargetSizeCheck"
                 />
 
@@ -62,6 +62,7 @@
         </LinearLayout>
 
         <View
+            android:id="@+id/filter"
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:layout_gravity="center"
@@ -106,10 +107,12 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/greyball_background">
+                android:background="@drawable/greyball_background"
+                android:onClick="first_offer">
 
 
                 <TextView
+                    android:id="@+id/sushi1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
@@ -123,10 +126,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/greyball_background">
+                android:background="@drawable/greyball_background"
+                android:onClick="second_offer">
 
 
                 <TextView
+                    android:id="@+id/sandwich2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
@@ -151,10 +156,12 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/greyball_background">
+                android:background="@drawable/greyball_background"
+                android:onClick="third_offer">
 
 
                 <TextView
+                    android:id="@+id/seafood3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
@@ -168,10 +175,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/greyball_background">
+                android:background="@drawable/greyball_background"
+                android:onClick="four_offer">
 
 
                 <TextView
+                    android:id="@+id/friedrice4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"

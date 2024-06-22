@@ -16,6 +16,8 @@ import ru.kmept.kormezhka.data.model.RecipeDTO
 
 
 class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>(),Callback<RecipeDTO>{
+
+    lateinit var onClickListener:((Recipe) -> Unit)
     var recipes: Array<Recipe> = emptyArray()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val view: View =
@@ -43,10 +45,12 @@ class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>(),Callback<Recip
         val productImageView: ImageView = holder.itemView.findViewById(R.id.product_photo)
         Picasso.get().load(recipe.pictureUrl).transform(transformation).into(productImageView)
 
-
-
         val productDuration: TextView = holder.itemView.findViewById(R.id.duration)
         productDuration.setText( ">" + recipe.duration.toString() + " mins")
+        
+        holder.itemView.setOnClickListener{
+            onClickListener(recipe)
+        }
     }
 
     override fun getItemCount(): Int {
