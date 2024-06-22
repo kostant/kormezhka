@@ -12,12 +12,14 @@ class ProductHeaderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView
     val avatarImageView: ImageView
     val nameTextView: TextView
     val likeTextView: TextView
+    val discipView : TextView
     init {
         foodTextView = itemView.findViewById(R.id.foodName)
         timeTextView = itemView.findViewById(R.id.time)
         avatarImageView = itemView.findViewById(R.id.avatar)
         nameTextView = itemView.findViewById(R.id.name)
         likeTextView = itemView.findViewById(R.id.like)
+        discipView = itemView.findViewById(R.id.description)
     }
 
 }

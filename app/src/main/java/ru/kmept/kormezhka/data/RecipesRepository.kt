@@ -18,7 +18,9 @@ class RecipesRepository {
             author = usersRepository.random(),
             duration = 60,
             pictureUrl = "https://www.eatingwell.com/thmb/gbn0y2H8YW_TYA0GPaW2cRiEblI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/chopped-power-salad-with-chicken-0ad93f1931524a679c0f8854d74e6e57.jpg",
-            description = "Здесь будет описание",
+            description = "Свежий салат с капустой Цезарь - это здоровое и вкусное блюдо, которое сочетает хрустящую капусту, сочную курицу и ароматные крутоны." +
+                    " Оно дополнено классическим соусом Цезарь и тертым пармезаном." +
+                    " Этот салат - прекрасный выбор для легкого ужина или ланча, а также идеально подходит в качестве гарнира.",
             likesCount = (0..1000).random(),
             createdAt = Date(2024, (0..4).random(), (0..28).random())
         ),
