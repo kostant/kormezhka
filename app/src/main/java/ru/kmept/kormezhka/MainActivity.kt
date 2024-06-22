@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity() {
         val noti_tab = findViewById<View>(R.id.noti_tab)
         val profile_tab = findViewById<View>(R.id.profile_tab)
         upload_tab.setOnClickListener {
-            switchFragment(FragmentSecond())
+            val intent = Intent(this, createrecip::class.java)
+            startActivity(intent)
             updateTabs(1)
         }
         home_tab.setOnClickListener {
@@ -49,6 +50,7 @@ class MainActivity : AppCompatActivity() {
             updateTabs(2)
         }
         noti_tab.setOnClickListener {
+            perehod(it)
             switchFragment(Noti())
             updateTabs(3)
         }
@@ -119,5 +121,10 @@ class MainActivity : AppCompatActivity() {
             val profileText: TextView=findViewById(R.id.profile_text)
             profileText.setTextColor(parseColor("#9FA5C0"))
         }
+    }
+    fun perehod(view: View) {
+        val intent = Intent(this@MainActivity, Akaunt::class.java)
+        startActivity(intent)
+
     }
 }

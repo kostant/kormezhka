@@ -1,19 +1,25 @@
 package ru.kmept.kormezhka
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import ru.kmept.kormezhka.data.RecipesRepository
+import ru.kmept.kormezhka.data.model.Recipe
+import ru.kmept.kormezhka.recipe_detail.RecipeScreen
 
 class main_screen : Fragment() {
 
+    val adapter = ProductsAdapter()
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,8 +33,15 @@ class main_screen : Fragment() {
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recycler)
 
-        val adapter = ProductsAdapter()
+
         recyclerView.adapter = adapter
+        adapter.onClickListener = {
+            val intent = Intent(context, RecipeScreen::class.java)
+            intent.putExtra("id", it.id)
+            startActivity(intent)
+
+
+        }
 
         val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(context, 2)
         recyclerView.layoutManager = layoutManager
@@ -38,6 +51,21 @@ class main_screen : Fragment() {
         val button_drink = view.findViewById<Button>(R.id.button_drink)
 
         setButtonColor(button_add, button_food, button_drink)
+        RecipesRepository.global.getAllRecipes {
+            updateScreenWithRecipes(it)
+        }
+
+        var newidsemen:LinearLayout = view.findViewById(R.id.IDsemen)
+        newidsemen.setOnClickListener {
+            val intent = Intent(context, searchclass::class.java)
+            startActivity(intent)
+        }
+    }
+
+    fun updateScreenWithRecipes(recipes: Array<Recipe>) {
+        // Обновить экран используя рецепты из массива recipes
+        adapter.recipes = recipes
+        adapter.notifyDataSetChanged()
     }
 
     private fun setButtonColor(vararg buttons: Button) {
