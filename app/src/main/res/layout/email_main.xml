@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MailActivity">
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -28,7 +29,8 @@
         android:layout_marginTop="8dp"
         android:text="We have sent the code to your email"
         android:textColor="#9FA5C0"
-        android:textSize="15dp" />
+        android:textSize="15dp"/>
+
 </LinearLayout>
 
     <LinearLayout
@@ -38,32 +40,56 @@
         android:gravity="center"
         android:layout_marginTop="35dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rectangle_34"
-            android:layout_marginRight="8dp">
-        </ImageView>
+        <EditText
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_34"
+            android:layout_marginLeft="10dp"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textColor="#3E5481"
+            android:textSize="30dp"
+            android:inputType="number">
+        </EditText>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rectangle_34"
-            android:layout_marginRight="8dp">
-        </ImageView>
+        <EditText
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_34"
+            android:layout_marginLeft="10dp"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textColor="#3E5481"
+            android:textSize="30dp"
+            android:inputType="number">
+        </EditText>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rectangle_34"
-            android:layout_marginRight="8dp">
-        </ImageView>
+        <EditText
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_34"
+            android:layout_marginLeft="10dp"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textColor="#3E5481"
+            android:textSize="30dp"
+            android:inputType="number">
+        </EditText>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rectangle_34">
-        </ImageView>
+        <EditText
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_34"
+            android:layout_marginLeft="10dp"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textColor="#3E5481"
+            android:textSize="30dp"
+            android:inputType="number">
+        </EditText>
+
+
+
     </LinearLayout>
 
    <LinearLayout
@@ -90,7 +116,9 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="03:00"
-               android:textColor="#FF6464"></TextView>
+               android:textColor="#FF6464">
+
+           </TextView>
 
 
        </LinearLayout>
@@ -103,21 +131,23 @@
            android:layout_marginTop="20dp"
            android:layout_marginRight="40dp"
            android:backgroundTint="#1FCC79"
-           android:text="Verify"></Button>
+           android:text="Verify">
+
+       </Button>
 
    </LinearLayout>
 
-    <Button
+    <TextView
         android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="40dp"
-        android:backgroundTint="@color/white"
-        android:textColor="#9FA5C0"
-
-        android:text="Send again"/>
+        android:background="@drawable/contr"
+        android:gravity="center"
+        android:text="Send again"
+        android:textColor="#9FA5C0" />
 
 
 </LinearLayout>
