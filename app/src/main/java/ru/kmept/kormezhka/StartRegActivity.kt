@@ -96,7 +96,7 @@ class StartRegActivity() : AppCompatActivity(), TextWatcher, Callback<Registrati
         val buttonSignIn: Button = findViewById(R.id.ButtonSignIn)
 
         buttonSignIn.setEnabled(false)
-        buttonSignIn.setBackgroundColor(Color.GRAY);
+        buttonSignIn.setBackgroundColor(Color.parseColor("#ededed"));
         buttonSignIn.setTextColor(Color.BLACK);
         buttonSignIn.setText("Loading...")
         for (c in passEditText.text) {
