@@ -1,6 +1,7 @@
 package ru.kmept.kormezhka
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.InputType
 import android.text.InputType.TYPE_CLASS_TEXT
@@ -19,6 +20,13 @@ class SignInActivity : AppCompatActivity(), Callback<LogInResponse> {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     setContentView(R.layout.sign_in_activity)
+        val sharedPref = getSharedPreferences("Storage", MODE_PRIVATE)
+        val TokenValue = sharedPref.getString("Token", "")
+        if (TokenValue != null && TokenValue != "")
+        {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun onClickEye(view: View) {
@@ -44,6 +52,14 @@ class SignInActivity : AppCompatActivity(), Callback<LogInResponse> {
     override fun onResponse(p0: Call<LogInResponse>, p1: Response<LogInResponse>) {
         val model = p1.body()
         if (model?.logStatus == 1) {
+            val sharedPref = getSharedPreferences("Storage", MODE_PRIVATE)
+            sharedPref.edit().putString("Token", /*""*/model.token).apply()
+
+            val Log = findViewById<EditText>(R.id.SignInLogin)
+            val Pass = findViewById<EditText>(R.id.SignInPasswd)
+            Log.setText("")
+            Pass.setText("")
+
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
