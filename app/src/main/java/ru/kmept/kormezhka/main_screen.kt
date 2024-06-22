@@ -12,11 +12,15 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import ru.kmept.kormezhka.data.RecipesRepository
 import ru.kmept.kormezhka.data.model.Recipe
+import ru.kmept.kormezhka.data.model.RecipeDTO
 import ru.kmept.kormezhka.recipe_detail.RecipeScreen
 
-class main_screen : Fragment() {
+class main_screen : Fragment(), Callback<Array<RecipeDTO>> {
 
     val adapter = ProductsAdapter()
     override fun onCreateView(
@@ -50,14 +54,12 @@ class main_screen : Fragment() {
         val button_drink = view.findViewById<Button>(R.id.button_drink)
 
         setButtonColor(button_add, button_food, button_drink)
-        RecipesRepository.global.getAllRecipes {
-            updateScreenWithRecipes(it)
-        }
 
+        RetrofitClient.apiService.getData().enqueue(this)
 
     }
 
-    fun updateScreenWithRecipes(recipes: Array<Recipe>) {
+    fun updateScreenWithRecipes(recipes: Array<RecipeDTO>) {
         // Обновить экран используя рецепты из массива recipes
         adapter.recipes = recipes
         adapter.notifyDataSetChanged()
@@ -80,5 +82,13 @@ class main_screen : Fragment() {
                 button.setTextColor(ContextCompat.getColor(requireContext(), R.color.text_color_dark))
             }
         }
+    }
+
+    override fun onResponse(p0: Call<Array<RecipeDTO>>, p1: Response<Array<RecipeDTO>>) {
+        updateScreenWithRecipes(p1.body()!!)
+    }
+
+    override fun onFailure(p0: Call<Array<RecipeDTO>>, p1: Throwable) {
+        TODO("Not yet implemented")
     }
 }

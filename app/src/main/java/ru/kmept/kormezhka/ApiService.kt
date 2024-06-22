@@ -10,5 +10,5 @@ interface ApiService {
     fun createUser(@Body user: User): Call<RegistrationResponse>
     
     @GET("get_all_recipe/")
-    fun getData(): Call<RecipeDTO>
+    fun getData(): Call<Array<RecipeDTO>>
 }

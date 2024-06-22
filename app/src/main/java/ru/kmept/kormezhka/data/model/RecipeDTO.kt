@@ -6,7 +6,7 @@ data class RecipeDTO (
     val name: String,
     val picture: String,
     val description: String,
-    val indgredients: String,
+    val ingredients: String,
     val stepJson: String,
     val duration: Int
 )

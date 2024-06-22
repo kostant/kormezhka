@@ -17,8 +17,8 @@ import ru.kmept.kormezhka.data.model.RecipeDTO
 
 class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>(),Callback<RecipeDTO>{
 
-    lateinit var onClickListener:((Recipe) -> Unit)
-    var recipes: Array<Recipe> = emptyArray()
+    lateinit var onClickListener:((RecipeDTO) -> Unit)
+    var recipes: Array<RecipeDTO> = emptyArray()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val view: View =
             LayoutInflater.from(parent.context).inflate(R.layout.product_item, parent, false)
@@ -26,24 +26,24 @@ class ProductsAdapter : RecyclerView.Adapter<ProductViewHolder>(),Callback<Recip
     }
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
-        val recipe: Recipe = recipes[position]
+        val recipe: RecipeDTO = recipes[position]
         val radius = 90
         val radius2 = 160
         val transformation = RoundedCornersTransformation(radius, 0, RoundedCornersTransformation.CornerType.ALL)
         val transformation2 = RoundedCornersTransformation(radius2, 0, RoundedCornersTransformation.CornerType.ALL)
 
 
-        val userNameTextView: TextView = holder.itemView.findViewById(R.id.user_name)
-        userNameTextView.setText(recipe.author.name)
+       // val userNameTextView: TextView = holder.itemView.findViewById(R.id.user_name)
+      //  userNameTextView.setText(recipe.author.name)
 
         val productNameTextView: TextView = holder.itemView.findViewById(R.id.product_name)
         productNameTextView.setText(recipe.name)
 
-        val userImageView: ImageView = holder.itemView.findViewById(R.id.user_photo)
-        Picasso.get().load(recipe.author.avatarUrl).transform(transformation).into(userImageView)
+       // val userImageView: ImageView = holder.itemView.findViewById(R.id.user_photo)
+       // Picasso.get().load(recipe.author.avatarUrl).transform(transformation).into(userImageView)
 
         val productImageView: ImageView = holder.itemView.findViewById(R.id.product_photo)
-        Picasso.get().load(recipe.pictureUrl).transform(transformation).into(productImageView)
+        Picasso.get().load(recipe.picture).transform(transformation).into(productImageView)
 
         val productDuration: TextView = holder.itemView.findViewById(R.id.duration)
         productDuration.setText( ">" + recipe.duration.toString() + " mins")
