@@ -13,6 +13,6 @@ public class Scan: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.scan, container, false)
+        return inflater.inflate(R.layout.profile_main, container, false)
     }
 }
