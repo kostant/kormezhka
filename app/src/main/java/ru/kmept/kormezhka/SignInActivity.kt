@@ -9,9 +9,13 @@ import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
-class SignInActivity : AppCompatActivity() {
+class SignInActivity : AppCompatActivity(), Callback<LogInResponse> {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     setContentView(R.layout.sign_in_activity)
@@ -31,8 +35,23 @@ class SignInActivity : AppCompatActivity() {
     }
 
     fun onClickLogIn(view: View) {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
+        val Log = findViewById<EditText>(R.id.SignInLogin)
+        val Pass = findViewById<EditText>(R.id.SignInPasswd)
+        val userLog = UserLog(Log.text.toString(), Pass.text.toString())
+        RetrofitClientLog.apiServiceLog.logUser(userLog).enqueue(this)
+    }
+
+    override fun onResponse(p0: Call<LogInResponse>, p1: Response<LogInResponse>) {
+        val model = p1.body()
+        if (model?.logStatus == 1) {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onFailure(p0: Call<LogInResponse>, p1: Throwable) {
+        //Log.d("KMEPT", p1.localizedMessage)
+        Snackbar.make(findViewById(android.R.id.content),"Неверный Логин или пароль", Snackbar.LENGTH_LONG).show()
     }
 
     fun onClickSignUp(view: View) {
