@@ -27,11 +27,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".createrecip"/>
+        <activity android:name=".StartRegActivity"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".main_screen"/>
+        <activity android:name=".recipe_detail.RecipeScreen"/>
         <activity android:name=".searchclass"/>
-        <activity android:name=".StartRegActivity"/>
+        <activity android:name=".MailActivity"/>
     </application>
 
 </manifest>

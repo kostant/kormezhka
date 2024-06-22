@@ -16,7 +16,7 @@
             android:id="@+id/user_photo"
             android:layout_width="31dp"
             android:layout_height="31dp"
-            android:background="@drawable/photo_maket"/>
+            android:src="@drawable/photo_maket"/>
 
         <TextView
             android:id="@+id/user_name"
@@ -37,7 +37,7 @@
             android:id="@+id/product_photo"
             android:layout_width="151dp"
             android:layout_height="151dp"
-            android:background="@drawable/big_photo_maket"/>
+            android:src="@drawable/big_photo_maket"/>
 
         <View
             android:layout_width="32dp"

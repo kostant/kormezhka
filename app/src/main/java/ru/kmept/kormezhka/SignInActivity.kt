@@ -18,7 +18,7 @@ import retrofit2.Response
 class SignInActivity : AppCompatActivity(), Callback<LogInResponse> {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.sign_in_activity)
+    setContentView(R.layout.sign_in_activity)
     }
 
     fun onClickEye(view: View) {
@@ -30,7 +30,7 @@ class SignInActivity : AppCompatActivity(), Callback<LogInResponse> {
             Eye.setImageResource(R.drawable.hide)
         } else {
             Pass.setInputType(TYPE_CLASS_TEXT or TYPE_TEXT_VARIATION_PASSWORD)
-            Eye.setImageResource(R.drawable.show1)
+            Eye.setImageResource(R.drawable.show2)
         }
     }
 
@@ -52,5 +52,10 @@ class SignInActivity : AppCompatActivity(), Callback<LogInResponse> {
     override fun onFailure(p0: Call<LogInResponse>, p1: Throwable) {
         //Log.d("KMEPT", p1.localizedMessage)
         Snackbar.make(findViewById(android.R.id.content),"Неверный Логин или пароль", Snackbar.LENGTH_LONG).show()
+    }
+
+    fun onClickSignUp(view: View) {
+        val intent = Intent(this, StartRegActivity::class.java)
+        startActivity(intent)
     }
 }
