@@ -37,7 +37,7 @@
         android:layout_height="56sp">
         
         <ImageView
-            android:background="@drawable/message1"
+            android:background="@drawable/message2"
             android:layout_marginTop="16dp"
             android:layout_marginLeft="24dp"
             android:layout_width="24sp"
@@ -71,7 +71,7 @@
         android:layout_height="56sp">
 
         <ImageView
-            android:background="@drawable/lock1"
+            android:background="@drawable/lock2"
             android:layout_marginTop="16dp"
             android:layout_marginLeft="24dp"
             android:layout_width="24sp"

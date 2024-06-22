@@ -41,7 +41,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/message1"
+            android:src="@drawable/message2"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="24dp">
 
@@ -80,7 +80,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/lock1"
+            android:src="@drawable/lock2"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="24dp">
 
@@ -107,7 +107,7 @@
             android:id="@+id/EyePasswd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/show1"
+            android:src="@drawable/show2"
             android:layout_gravity="center_vertical"
             android:layout_marginRight="24dp"
             android:layout_marginLeft="10dp"

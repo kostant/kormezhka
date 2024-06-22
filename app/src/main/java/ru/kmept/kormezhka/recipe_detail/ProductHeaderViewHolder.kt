@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 import ru.kmept.kormezhka.R
 
 class ProductHeaderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    private val foodTextView: TextView
-    private val timeTextView: TextView
-    private val avatarImageView: ImageView
-    private val nameTextView: TextView
-    private val likeTextView: TextView
+    val foodTextView: TextView
+    val timeTextView: TextView
+    val avatarImageView: ImageView
+    val nameTextView: TextView
+    val likeTextView: TextView
     init {
         foodTextView = itemView.findViewById(R.id.foodName)
         timeTextView = itemView.findViewById(R.id.time)
