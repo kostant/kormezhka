@@ -3,6 +3,8 @@ package ru.kmept.kormezhka
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -12,18 +14,19 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class searchclass : AppCompatActivity() {
+class searchclass : AppCompatActivity(), TextWatcher {
     lateinit var recyclerView: RecyclerView
     var adapter = Adapter()
     lateinit var serch_line:EditText;
      lateinit var searchhelper:LinearLayout;
+    lateinit var itemsOtKiri:TextView;
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.search_layout)
         serch_line = findViewById(R.id.searchbandle)
         adapter.searchLine = serch_line
-
+        serch_line.addTextChangedListener(this)
         // получаем ссылку на RecyclerView
          recyclerView = findViewById(R.id.recyclerView)
 
@@ -84,4 +87,24 @@ class searchclass : AppCompatActivity() {
         serch_line.setText(searchbandle.text);
     }
 
+    override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+    }
+
+    override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+        if (serch_line.getText().toString().trim().length > 0)
+        {
+            serch_line.setHint("Введите запрос");
+
+        }
+
+    }
+
+
+    override fun afterTextChanged(s: Editable?) {
+
+    }
+
 }
+
