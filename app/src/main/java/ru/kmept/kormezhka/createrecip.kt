@@ -17,4 +17,8 @@ class createrecip : AppCompatActivity() {
         }
 
     }
+    fun onClicRecept(view: View) {
+        val intent = Intent(this, Uploads2::class.java)
+        startActivity(intent)
+    }
 }
