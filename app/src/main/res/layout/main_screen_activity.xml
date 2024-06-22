@@ -18,6 +18,7 @@
         android:background="@drawable/white_background_rectangle">
 
         <LinearLayout
+            android:id="@+id/IDsemen"
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp"
             android:layout_width="match_parent"
@@ -35,7 +36,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="24dp"/>
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Search"

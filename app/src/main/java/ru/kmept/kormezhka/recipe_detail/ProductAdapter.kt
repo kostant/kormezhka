@@ -28,7 +28,6 @@ class ProductAdapter : RecyclerView.Adapter<ProductHeaderViewHolder>() {
         val transformation = RoundedCornersTransformation(radius, 0, RoundedCornersTransformation.CornerType.ALL)
         val recipe = recipe
         if (recipe != null) {
-
             holder.foodTextView.setText(recipe.name)
             holder.timeTextView.setText(recipe.duration.toString())
             holder.nameTextView.text = recipe.author.name
