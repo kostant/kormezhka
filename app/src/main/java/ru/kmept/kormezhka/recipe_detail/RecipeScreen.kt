@@ -31,6 +31,7 @@ class RecipeScreen : AppCompatActivity() {
             adapter.recipe = it
             it.pictureUrl
 
+
             Picasso.get()
                 .load(it.pictureUrl)
                 .into(pictureimageView)

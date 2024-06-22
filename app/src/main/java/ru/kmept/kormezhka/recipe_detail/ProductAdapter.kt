@@ -32,6 +32,7 @@ class ProductAdapter : RecyclerView.Adapter<ProductHeaderViewHolder>() {
             holder.timeTextView.setText(recipe.duration.toString())
             holder.nameTextView.text = recipe.author.name
             holder.likeTextView.setText(recipe.likesCount.toString())
+            holder.discipView.setText(recipe.description)
             holder.avatarImageView
             recipe.author.avatarUrl
 
