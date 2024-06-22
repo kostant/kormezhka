@@ -20,11 +20,11 @@
             android:layout_marginLeft="24dp"
             android:layout_marginTop="12dp"
             android:layout_marginRight="290dp"
-            android:clickable="true"
+            android:id="@+id/exitee"
             android:text="Cancel"
             android:textColor="#FF6464"
             android:textSize="17dp"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="27dp"
@@ -32,7 +32,7 @@
             android:textSize="17dp"
             android:layout_marginTop="12dp"
             android:clickable="true"
-            android:text="1/2" />
+            android:text="2/2" />
 
     </LinearLayout>
 
@@ -65,7 +65,7 @@
 
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/vector" />
+                android:src="@drawable/close" />
 
             <TextView
                 android:layout_width="45dp"
@@ -157,7 +157,7 @@
 
            android:layout_width="24dp"
            android:layout_height="24dp"
-           android:src="@drawable/vector" />
+           android:src="@drawable/close" />
 
            <TextView
                android:layout_width="74dp"
@@ -260,6 +260,7 @@
         android:layout_marginTop="32dp">
 
         <Button
+            android:id="@+id/backBTN"
             android:layout_width="156dp"
             android:layout_height="56dp"
             android:layout_marginLeft="24dp"
