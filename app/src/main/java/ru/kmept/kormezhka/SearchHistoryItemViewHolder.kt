@@ -9,7 +9,7 @@ class SearchHistoryItemViewHolder (itemView: View) : RecyclerView.ViewHolder(ite
 {
 
     val avatarImageView: ImageView
-    val avatar2ImageView: ImageView
+
     val nameTextView: TextView
     fun SetText (Text:String)
     {
@@ -17,7 +17,7 @@ class SearchHistoryItemViewHolder (itemView: View) : RecyclerView.ViewHolder(ite
     }
     init {
         avatarImageView = itemView.findViewById(R.id.avatarImageView)
-        avatar2ImageView = itemView.findViewById(R.id.avatar2ImageView)
+
         nameTextView = itemView.findViewById(R.id.nameTextView)
     }
 
