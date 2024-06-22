@@ -58,4 +58,8 @@ class SignInActivity : AppCompatActivity(), Callback<LogInResponse> {
         val intent = Intent(this, StartRegActivity::class.java)
         startActivity(intent)
     }
+    fun onClickGoogle(view: View){
+        val intent= Intent(this,MailActivity::class.java)
+        startActivity(intent)
+    }
 }

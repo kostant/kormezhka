@@ -163,6 +163,7 @@
 
     <Button
         android:id="@+id/SignInGoogle"
+        android:onClick="onClickGoogle"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:text="Google"
