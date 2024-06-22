@@ -32,6 +32,8 @@
         <activity android:name=".searchclass"/>
         <activity android:name=".MailActivity"/>
         <activity android:name=".Akaunt" />
+        <activity android:name=".upload2" />
+
     </application>
 
 </manifest>
